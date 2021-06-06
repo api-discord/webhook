@@ -1,5 +1,6 @@
-var create = function() {
-var url = "var img = "hmens850839687336951889/850840835196321802/26f6aaba773.jg"
+var create = function(url, username, content) {
+var url = url
+var img = ""
 var xhr = new XMLHttpRequest();
 xhr.open("POST", url);
 
@@ -12,8 +13,11 @@ xhr.onreadystatechange = function () {
   }
 };
 
-var data = '{"content": "go", "username": "discord api", "avatar_url": "https://cdn.discordapp.com/attachments/850839687336951889/850840835196321802/926f6aaba773.jpg" }';
+var data = '{"content": content, "username": username}';
 
 xhr.send(data);
 
+}
+module.export = {
+create: create
 }
